@@ -54,7 +54,7 @@ export const copy = (data: string | HTMLElement) => {
           reject(err);
         }
       };
-    } else if (typeof data === "string") {
+    } else if (typeof data === "string" && /^data:image\/(png|jpeg|webp);base64,/.test(data)) {
       let blob = convertBase64ToBlob(data, "image/png");
       try {
         await navigator.clipboard.write([
@@ -66,6 +66,8 @@ export const copy = (data: string | HTMLElement) => {
       } catch (err) {
         reject(err);
       }
+    } else if(typeof data === "string") {
+        resolve('copy failed, data error')
     } else {
     //   console.log(data.nodeName);
       if (data.nodeName === "IMG") {
