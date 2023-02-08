@@ -1,6 +1,6 @@
 {
   "name": "clipboard-img",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "一个用来复制图片的工具包",
   "main": "./dist/index.cjs.js",
   "module": "./dist/index.esm.js",
