@@ -27,3 +27,5 @@ copy('可以是一个base64编码的图片').then()
 copy(document.getElementById('con')).then()
 
 ```
+## 兼容性
+[浏览器兼容]<https://caniuse.com/?search=%20Navigator%20API%3Aclipboard>
